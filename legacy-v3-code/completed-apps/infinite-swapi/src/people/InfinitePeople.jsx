@@ -3,7 +3,7 @@ import { useInfiniteQuery } from "react-query";
 
 import { Person } from "./Person";
 
-const initialUrl = "https://swapi.dev/api/people/";
+const initialUrl = "https://swapi.py4e.com/api/people/";
 const fetchUrl = async (url) => {
   const response = await fetch(url);
   return response.json();
@@ -26,12 +26,12 @@ export function InfinitePeople() {
     }
   );
 
-  if (isLoading) return <div className="loading">Loading...</div>;
+  if (isLoading) return <div className='loading'>Loading...</div>;
   if (isError) return <div>Error! {error.toString()}</div>;
 
   return (
     <>
-      {isFetching && <div className="loading">Loading...</div>}
+      {isFetching && <div className='loading'>Loading...</div>}
       <InfiniteScroll loadMore={fetchNextPage} hasMore={hasNextPage}>
         {data.pages.map((pageData) => {
           return pageData.results.map((person) => {

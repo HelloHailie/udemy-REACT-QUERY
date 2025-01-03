@@ -15,4 +15,4 @@ Run `npm start`. The app will be found at [http://localhost:3000]
 
 ## Server
 
-This app uses the [Star Wars API](https://swapi.dev/) server.
+This app uses the [Star Wars API](https://swapi.py4e.com/) server.
